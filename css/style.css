@@ -1,0 +1,152 @@
+/* Dream Film Studio - Custom Stylesheet matching Official Logo */
+
+:root {
+    --color-orange: #FF5722;
+    --color-orange-glow: rgba(255, 87, 34, 0.35);
+    --color-amber: #FFB300;
+    --color-amber-glow: rgba(255, 179, 0, 0.3);
+    --color-dark: #090A0F;
+    --color-card: #12141D;
+    --color-border: #212536;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #090A0F;
+}
+::-webkit-scrollbar-thumb {
+    background: #252A3D;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #FF5722;
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+    background: rgba(18, 20, 29, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 87, 34, 0.15);
+}
+
+/* Logo Ring Glow Effect */
+.logo-ring {
+    position: relative;
+    border-radius: 9999px;
+    box-shadow: 0 0 20px rgba(255, 87, 34, 0.4), inset 0 0 10px rgba(255, 179, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.logo-ring:hover {
+    transform: scale(1.05) rotate(3deg);
+    box-shadow: 0 0 30px rgba(255, 87, 34, 0.7), 0 0 15px rgba(255, 179, 0, 0.5);
+}
+
+/* Custom Styling for Before-After Slider Range input */
+#ba-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+}
+#ba-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 48px;
+    height: 48px;
+    cursor: ew-resize;
+    opacity: 0;
+}
+#ba-slider::-moz-range-thumb {
+    width: 48px;
+    height: 48px;
+    cursor: ew-resize;
+    opacity: 0;
+}
+
+/* Calculator Category & Tier Active States */
+.calc-cat-btn {
+    background-color: rgba(9, 10, 15, 0.7);
+    border-color: #212536;
+}
+.calc-cat-btn:hover {
+    border-color: rgba(255, 87, 34, 0.5);
+}
+.calc-cat-btn.active {
+    background-color: rgba(255, 87, 34, 0.15);
+    border-color: #FF5722;
+    box-shadow: 0 0 15px rgba(255, 87, 34, 0.2);
+}
+
+.calc-tier-btn {
+    background-color: rgba(9, 10, 15, 0.7);
+    border-color: #212536;
+}
+.calc-tier-btn:hover {
+    border-color: rgba(255, 87, 34, 0.5);
+}
+.calc-tier-btn.active {
+    background-color: rgba(255, 87, 34, 0.18);
+    border-color: #FF5722;
+    box-shadow: 0 0 15px rgba(255, 87, 34, 0.2);
+}
+
+/* Portfolio Card Hover Transitions */
+.portfolio-card {
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+}
+.portfolio-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.8), 0 0 25px rgba(255, 87, 34, 0.18);
+    border-color: rgba(255, 87, 34, 0.6);
+}
+
+/* Gradient text utility */
+.text-gradient-orange {
+    background: linear-gradient(135deg, #FF6A00 0%, #FFB300 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Subtle Gradient Glow Animations */
+@keyframes orangePulse {
+    0%, 100% {
+        opacity: 0.25;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.45;
+        transform: scale(1.08);
+    }
+}
+.ambient-orange-glow {
+    animation: orangePulse 5s ease-in-out infinite;
+}
+
+/* Instagram Reel Card Styling */
+.reel-card {
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.3s ease;
+}
+.reel-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px -12px rgba(255, 87, 34, 0.3), 0 0 35px rgba(255, 87, 34, 0.2);
+    border-color: #FF5722;
+}
+.reel-like-btn.liked i {
+    color: #ef4444 !important;
+    animation: heartPop 0.4s ease;
+}
+@keyframes heartPop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.35); }
+    100% { transform: scale(1); }
+}
+.music-disc-spin {
+    animation: spinDisc 4s linear infinite;
+}
+@keyframes spinDisc {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
